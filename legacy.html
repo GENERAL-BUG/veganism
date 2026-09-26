@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Legacy — RootedImpact</title>
+  <meta name="description" content="See the enormous ripple effect your plant-based choice creates over a lifetime.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+  <div class="page-transition"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span>🌱</span> RootedImpact</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Our Why</a></li>
+        <li><a href="impact.html">Your Impact</a></li>
+        <li><a href="legacy.html" class="active">Your Legacy</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== INTRO ===== -->
+  <section class="section legacy-intro">
+    <div class="container text-center">
+      <span class="section-label reveal">Lifetime Calculator</span>
+      <h1 class="reveal">Your Lifetime as a Vegan</h1>
+      <p class="reveal" style="margin:1rem auto 0;">See the enormous ripple effect your choice creates over a lifetime.</p>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <section class="section legacy-form-section">
+    <div class="container">
+      <div class="legacy-form-card reveal">
+        <form id="legacy-form">
+          <div class="form-group">
+            <label for="user-name">What's your name?</label>
+            <input type="text" id="user-name" placeholder="Enter your name" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="years-slider">How many years do you plan to eat plant-based?</label>
+            <div class="slider-group">
+              <input type="range" id="years-slider" min="1" max="80" value="10">
+              <span class="slider-value" id="years-display">10 years</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Calculate My Legacy 🌱</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS ===== -->
+  <section class="section legacy-results">
+    <div class="container text-center">
+      <div class="results-headline">
+        <span class="section-label">Your Personal Impact</span>
+        <h2><em id="res-name">Your</em> Impact Over <span id="res-years">10</span> Years</h2>
+      </div>
+
+      <div class="impact-cards-grid">
+        <div class="impact-card">
+          <span class="impact-icon">🐄</span>
+          <span class="impact-number" id="res-animals">0</span>
+          <span class="impact-desc">Animals Saved from Slaughter</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-icon">🌿</span>
+          <span class="impact-number" id="res-co2">0</span>
+          <span class="impact-desc">kg of CO₂ Avoided</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-icon">💧</span>
+          <span class="impact-number" id="res-water">0</span>
+          <span class="impact-desc">Litres of Water Conserved</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-icon">🌳</span>
+          <span class="impact-number" id="res-trees">0</span>
+          <span class="impact-desc">Equivalent Trees Planted</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-icon">🏭</span>
+          <span class="impact-number" id="res-suffering">0</span>
+          <span class="impact-desc">Days of Factory Farm Suffering Prevented</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-icon">💚</span>
+          <span class="impact-number" id="res-inspired">0</span>
+          <span class="impact-desc">People Inspired to Change</span>
+        </div>
+      </div>
+
+      <p class="results-message" id="res-message"></p>
+
+      <div class="share-btn-wrap">
+        <button class="btn btn-primary" id="share-btn">📋 Share My Legacy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLECTIVE VISION ===== -->
+  <section class="section collective-section">
+    <div class="container text-center">
+      <span class="section-label reveal" style="color:rgba(255,255,255,0.6);">Collective Power</span>
+      <h2 class="reveal" style="color:#fff;">Imagine If 1 Million People Made This Choice</h2>
+
+      <div class="collective-grid stagger-children">
+        <div class="collective-stat reveal">
+          <span class="col-number" data-count="500" data-suffix=" Million">0</span>
+          <span class="col-label">Animals Saved</span>
+        </div>
+        <div class="collective-stat reveal">
+          <span class="col-number" data-count="1.2" data-suffix=" Billion kg" data-decimals="1">0</span>
+          <span class="col-label">CO₂ Avoided</span>
+        </div>
+        <div class="collective-stat reveal">
+          <span class="col-number" data-count="4" data-suffix=" Trillion Litres">0</span>
+          <span class="col-label">Water Saved</span>
+        </div>
+      </div>
+
+      <p class="collective-quote reveal">"This is not a dream. This is arithmetic."</p>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="section closing-section">
+    <div class="container text-center">
+      <h2 class="reveal">The Planet Doesn't Need a Few People Doing Veganism Perfectly.<br>It Needs Millions Doing It <em>Imperfectly.</em></h2>
+      <p class="reveal">Start with one meal. Then another. That's how revolutions begin.</p>
+      <a href="impact.html" class="btn btn-primary reveal">Explore Vegan Meals →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2026 RootedImpact. Made with 💚 for the planet.</span>
+        <div class="footer-links">
+          <a href="index.html">Our Why</a>
+          <a href="impact.html">Your Impact</a>
+          <a href="legacy.html">Your Legacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
