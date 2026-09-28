@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -131,7 +132,9 @@
         </div>
       </div>
 
-      <p class="collective-quote reveal">"This is not a dream. This is arithmetic."</p>
+      <div class="collective-quote-wrap reveal">
+        <p class="collective-quote">"This is not a dream. This is arithmetic."</p>
+      </div>
     </div>
   </section>
 
@@ -159,5 +162,18 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const supabaseUrl = 'https://iyocbmfgiawqwghicjdq.supabase.co';
+    const supabaseKey = 'sb_publishable_conDsM6YmO9wYQx_p2oxJg_B2oBzzVD';
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function saveLegacy(name, years, animals_saved, co2_avoided, trees_equivalent) {
+      try {
+        await supabaseClient
+          .from('legacy_submissions')
+          .insert([{ name, years, animals_saved, co2_avoided, trees_equivalent }]);
+      } catch (e) {}
+    }
+  </script>
 </body>
 </html>

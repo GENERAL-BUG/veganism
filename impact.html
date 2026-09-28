@@ -57,7 +57,7 @@
           <!-- Budget -->
           <div class="meal-card" data-co2="0.3" data-lives="0.8">
             <div class="meal-card-header">
-              <span class="meal-tag budget">Budget</span>
+              <span class="meal-tag budget">Everyday</span>
               <h3>Oat Porridge with Banana &amp; Seeds</h3>
             </div>
             <div class="meal-nutrition">
@@ -94,7 +94,7 @@
           <!-- Premium -->
           <div class="meal-card" data-co2="0.5" data-lives="1.2">
             <div class="meal-card-header">
-              <span class="meal-tag premium">Premium</span>
+              <span class="meal-tag premium">Mindful</span>
               <h3>Avocado Toast with Hemp Seeds &amp; Microgreens</h3>
             </div>
             <div class="meal-nutrition">
@@ -135,7 +135,7 @@
         <div class="meals-grid">
           <div class="meal-card" data-co2="0.8" data-lives="1.5">
             <div class="meal-card-header">
-              <span class="meal-tag budget">Budget</span>
+              <span class="meal-tag budget">Everyday</span>
               <h3>Chana Masala with Brown Rice</h3>
             </div>
             <div class="meal-nutrition">
@@ -171,7 +171,7 @@
 
           <div class="meal-card" data-co2="1.1" data-lives="2.0">
             <div class="meal-card-header">
-              <span class="meal-tag premium">Premium</span>
+              <span class="meal-tag premium">Mindful</span>
               <h3>Quinoa Buddha Bowl with Roasted Vegetables &amp; Tahini</h3>
             </div>
             <div class="meal-nutrition">
@@ -212,7 +212,7 @@
         <div class="meals-grid">
           <div class="meal-card" data-co2="0.9" data-lives="1.8">
             <div class="meal-card-header">
-              <span class="meal-tag budget">Budget</span>
+              <span class="meal-tag budget">Everyday</span>
               <h3>Dal Tadka with Roti</h3>
             </div>
             <div class="meal-nutrition">
@@ -248,7 +248,7 @@
 
           <div class="meal-card" data-co2="1.3" data-lives="2.4">
             <div class="meal-card-header">
-              <span class="meal-tag premium">Premium</span>
+              <span class="meal-tag premium">Mindful</span>
               <h3>Mushroom Risotto with Truffle Oil &amp; Fresh Herbs</h3>
             </div>
             <div class="meal-nutrition">
@@ -289,7 +289,7 @@
         <div class="meals-grid">
           <div class="meal-card" data-co2="0.1" data-lives="0.3">
             <div class="meal-card-header">
-              <span class="meal-tag budget">Budget</span>
+              <span class="meal-tag budget">Everyday</span>
               <h3>Roasted Chana &amp; Fruit</h3>
             </div>
             <div class="meal-nutrition">
@@ -325,7 +325,7 @@
 
           <div class="meal-card" data-co2="0.2" data-lives="0.5">
             <div class="meal-card-header">
-              <span class="meal-tag premium">Premium</span>
+              <span class="meal-tag premium">Mindful</span>
               <h3>Almond Butter with Apple &amp; Dark Chocolate</h3>
             </div>
             <div class="meal-nutrition">
@@ -364,21 +364,27 @@
     </div>
   </section>
 
-  <!-- Daily Tracker -->
-  <div class="daily-tracker">
-    <div class="container">
-      <div class="tracker-inner">
-        <span class="tracker-stat">
-          <span class="tracker-icon">🌿</span>
-          Today you saved <span class="tracker-val" id="tracker-co2">0</span> kg CO₂
-        </span>
-        <span class="tracker-stat">
-          <span class="tracker-icon">🐄</span>
-          and spared <span class="tracker-val" id="tracker-lives">0</span> animal lives
-        </span>
-      </div>
+  <!-- Floating Impact Bubble -->
+  <aside class="daily-tracker" id="daily-tracker" role="status" aria-live="polite">
+    <div class="tracker-label">Your impact so far</div>
+    <div class="tracker-line">
+      <span class="tracker-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A7C59" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6"></path>
+        </svg>
+      </span>
+      <span class="tracker-text"><strong id="tracker-co2">0</strong> kg CO2 saved today</span>
     </div>
-  </div>
+    <div class="tracker-line">
+      <span class="tracker-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#4A7C59" stroke="#4A7C59" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+        </svg>
+      </span>
+      <span class="tracker-text"><strong id="tracker-lives">0</strong> lives spared today</span>
+    </div>
+  </aside>
 
   <!-- Footer -->
   <footer class="footer">

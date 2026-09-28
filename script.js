@@ -238,6 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const livesEl = document.getElementById('tracker-lives');
       if (co2El) co2El.textContent = totalCo2.toFixed(1);
       if (livesEl) livesEl.textContent = totalLives.toFixed(1);
+
+      // Trigger gentle pulse animation
+      tracker.classList.remove('pulse');
+      void tracker.offsetWidth; // Force reflow
+      tracker.classList.add('pulse');
     }
   }
 
@@ -303,6 +308,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (el) animateCounterEl(el);
           });
         }, 600);
+      }
+
+      // Save submission to Supabase
+      if (typeof saveLegacy === 'function') {
+        saveLegacy(name, years, animalsSaved, co2Avoided, treesEquiv);
       }
 
       // Message
